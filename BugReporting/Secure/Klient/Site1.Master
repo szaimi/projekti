@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="BugReporting.Secure.Klient.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="/Style/jquery.min.js"></script>
+    <link rel="stylesheet" href="/Style/bootstrap.min.css" />
+    <script type="text/javascript" src="/Style/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+    <div>
+        <!--FILLON MENUJA-->
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="Default.aspx">Bug Reporting System</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id="menu" class="nav navbar-nav">
+        <li id="dashboard" runat="server"><a href="Default.aspx"><span class="fa fa-th"></span>&nbsp;Tickets e mia<span class="sr-only">(current)</span></a></li>
+        <li id="newticket" runat="server"><a href="NewTicket.aspx"><span class="fa fa-plus"></span>&nbsp;Ticket i ri</a></li>
+      </ul>
+       
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" id="account" runat="server">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="fa fa-user"></span>&nbsp;Llogaria ime
+              <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="divider"></li>
+            <li><asp:LinkButton runat ="server" ID="LogOut" Text="Log out" CausesValidation="false" OnClick="lnkLogout_Click"></asp:LinkButton></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--MBARON MENUJA-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
